@@ -13,6 +13,7 @@ We
 
 # Sample of Original Images and Random Reconstructions
 top row are four different original material microstructures samples and bottom row is their corresponded random reconstructions
+
 ![](images/imagecompare2.PNG)
 
 ## Filters extracted from each layer(take Ti-6Al-4V as an example)
