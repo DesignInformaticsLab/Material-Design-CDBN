@@ -52,6 +52,7 @@ so that we could not reconstruct the original images with the extracted features
 ![](images/compare.PNG)
 
 # Impelementation Notice:
+To have the result shown in the paper, please run the 'scripts.m' and follow the instruction in the code.
 - To visualize the each layer's filter please:
   * first layer: load the results//weights and visualize the matrix "gather(weight.vishid)"
   * other layers: refer to code:
