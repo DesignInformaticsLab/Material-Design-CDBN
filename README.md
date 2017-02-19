@@ -6,14 +6,14 @@ Full paper here: [https://arxiv.org/abs/1612.07401](https://arxiv.org/abs/1612.0
 We 
 - Set up a 5-layer network consisted by 3 layers of convolutional RBM and 2 fully connected RBM
 
-![](images/configuration.png)
+![](images/configuration.PNG)
 
 - The proposed CDBN could reduce the dimension of material microstructure images from 40,000 -> 30.
 - The network can reconstruct random microstructures with properties statistically similar to the original samples.
 
 # Sample of Original Images and Random Reconstructions
 top row are four different original material microstructures samples and bottom row is their corresponded random reconstructions
-![](images/imagecompare2.JPG)
+![](images/imagecompare2.PNG)
 
 ## Filters extracted from each layer(take Ti-6Al-4V as an example)
 1st layer:
