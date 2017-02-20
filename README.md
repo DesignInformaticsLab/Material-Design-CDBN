@@ -85,3 +85,8 @@ To have the result shown in the paper, please run the 'scripts.m' and follow the
 
 ![](images/post_processing.PNG)
 
+# Acknoledge:
+Thanks to
+- Dr. **Honglak Lee**(UMich), Dr. **Kihyuk Sohn**(UMich/NEC) and **Ye Liu**(UMich/OSU) on CDBN implementation
+- Dr. **Yang Jiao**(ASU), Dr. **Yongmin Liu**(ASU) and **Yaopengxiao Xu**(ASU) on data acquisition, simulation and validation
+- Dr. **Wei Chen**(Northwestern), Dr. **Hongyi Xu**(Northwester/Ford) and Dr. **Ramin Bostanabad**(Northwestern) on material synthesis and other valuable discussions. 
