@@ -51,6 +51,7 @@ original reconstructions and random reconstructions. We could see overall they'r
 so that we could not reconstruct the original images with the extracted features as shown below:
 
 ![](images/compare.PNG)
+![](images/compare2.PNG) 
 
 # Impelementation Notice:
 To have the result shown in the paper, please run the 'scripts.m' and follow the instruction in the code.
