@@ -48,7 +48,7 @@ str = input(prompt,'s');
 tic
 acc = {};fname = {};optgpu=1;
 addpath('3rd_code','3rd_hidstate')
-acc{end+1} = WB_3rd_layer(optgpu, 9, 288, 0.1, 10, 0.01);
+acc{end+1} = WB_3rd_layer(optgpu, 9, 64, 0.1, 10, 0.01);
 toc
 prompt = 'REMIND:\n please change the file name in "third_recon_.m"(line 2,line 30) to the above file name and the pooled hidstate file name? \n Y/N [Y]: ';
 str = input(prompt,'s');

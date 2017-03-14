@@ -95,11 +95,11 @@ params.numvis = params.ws^2*params.numch;
 
 % filename to save
 if strcmp(params.txtype, 'rot'),
-    fname = sprintf('WB_45th_(2f40f144f288f6w9ws9ws12ws)_%s_w%d_b%02d_%s_nrot%d_pb%g_pl%g', ...
+    fname = sprintf('sandstone_3rd_(24f40f64f6ws9ws9ws)_limcpatch_%s_w%d_b%02d_%s_nrot%d_pb%g_pl%g', ...
         params.dataset, params.ws, params.numhid, params.txtype, params.numtx, params.pbias, params.plambda);
 % trans and scale will be ignored here
 elseif strcmp(params.txtype, 'trans') || strcmp(params.txtype, 'scale'),
-    fname = sprintf('WB_45th_(2f40f144f288f6w9ws9ws12ws)_%s_w%d_b%02d_%s_ntx%d_gr%d_pb%g_pl%g', ...
+    fname = sprintf('sandstone_3rd_(24f40f64f6ws9ws9ws)_limcpatch_%s_w%d_b%02d_%s_ntx%d_gr%d_pb%g_pl%g', ...
         params.dataset, params.ws, params.numhid, params.txtype, params.numtx, params.grid, params.pbias, params.plambda);
 end
 params.fname  = sprintf('%s/%s', params.savepath, fname);

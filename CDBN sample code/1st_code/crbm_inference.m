@@ -68,7 +68,7 @@ function [poshidexp2] = crbm_inference(image, weight, Tlist, params,ii)
     [hidstate, ~] = sample_multinomial(hidprob, params.optgpu);
     hidstate = reshape(hidstate(1:numtx, :), numtx, numhid, batchsize);
     
-    fname = sprintf('hidstates1st_WB_100_(2f12r6wsP10Pb01)_%d',ii);
+    fname = sprintf('hidstates1st_sandstone_(24f6wsP10Pb03)_%d',ii);
     save(sprintf('1st_hidstate/%s.mat',fname),'hidstate', '-v7.3');
     
     negdata = zeros(L, H, numchannels);

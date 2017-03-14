@@ -1,8 +1,8 @@
 addpath('results','alloy_mat','function_code','utils')
-fname=sprintf('WB_100_f2rot12_alloy_w6_b02_rot_nrot12_pb0.1_pl20_iter_200');
+fname=sprintf('sandstone_alloy_w6_b24_rot_nrot1_pb0.3_pl10_iter_2000');
 load(sprintf('%s.mat',fname));
 % addpath('../structure/');
-load('WB.mat')
+load('sandstone.mat')
 params.optgpu = 0;
 spacing = 1;
 ws=params.ws;
@@ -27,10 +27,10 @@ Tlist = get_txmat(params.txtype, params.rs, params.ws, params.grid, params.numro
 params.numtx = length(Tlist);
 
     
-for ii = 1:100
+for ii = 1:60
 % images_all = sample_images_all(dataname);
 
-image = WB(ii,:);
+image = xtr(ii,:);
 image = reshape(image,[200,200]);
     
     [image_reconstruct]= crbm_inference(image, weight, Tlist, params,ii); % remove rbm1.pars and set the value0.2 inside the function 10/15/2015

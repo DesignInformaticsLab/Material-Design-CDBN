@@ -1,15 +1,15 @@
 clear;
-addpath('function_code','utils','visualization_recon');
+addpath('function_code','utils');
 
-load('filter_2nd_layer.mat');
-load('WB_2nd_10_(2f40f6ws9ws_nonorm)_alloy_w9_b40_trans_ntx1_gr1_pb0.1_pl20_iter_2000.mat')
-numch = 24;
+load('filter_2nd_sandstone(24f40fPb1010P0301)_limcpatch.mat');
+load('sandstone_3rd_(24f40f64f6ws9ws9ws)_limcpatch_alloy_w9_b64_trans_ntx1_gr1_pb0.1_pl10_iter_1000.mat')
+numch = 40;
 
 %define 3rd layer filter
 W_Three=gather(weight.vishid);
 %pool back 3rd layer filter
 for i = 1:size(W_Three,2)
-    W_temp=reshape(W_Three(:,i),[9*9 24]);
+    W_temp=reshape(W_Three(:,i),[9*9 40]);
     for j = 1:numch
         W_temp2=reshape(W_temp(:,j),[9 9]);
         W_temp2=imresize(W_temp2,[9*4 9*4]);

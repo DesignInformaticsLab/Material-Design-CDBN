@@ -54,7 +54,7 @@ params.sptype = sptype;
 params.savepath = savedir;
 
 % other hyper parameters
-params.maxiter = 200;
+params.maxiter = 4000;
 params.batchsize = batchSize;
 params.epsilon = epsilon;
 params.eta_sigma = eta_sigma;
@@ -94,7 +94,7 @@ params.numtx = length(Tlist);
 
 % filename to save
 if strcmp(params.txtype, 'rot'),
-    fname = sprintf('WB_100_f2rot12_%s_w%d_b%02d_%s_nrot%d_pb%g_pl%g', ...
+    fname = sprintf('WB_%s_w%d_b%02d_%s_nrot%d_pb%g_pl%g', ...
         params.dataset, params.ws, params.numhid, params.txtype, params.numtx, params.pbias, params.plambda);
 % trans and scale will be ignored here
 elseif strcmp(params.txtype, 'trans') || strcmp(params.txtype, 'scale'),

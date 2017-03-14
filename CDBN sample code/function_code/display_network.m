@@ -34,7 +34,7 @@ else
     n = cols;
     m = ceil(M/n);
 end
-n=6;m=1;
+% n=6;m=1;
 array=-ones(buf+m*(sz+buf),buf+n*(sz+buf));
 
 if ~opt_graycolor

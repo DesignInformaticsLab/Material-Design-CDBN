@@ -1,5 +1,5 @@
 addpath('results')
-fname=sprintf('WB_2nd_10_(2f40f6ws9ws_nonorm)_alloy_w9_b40_trans_ntx1_gr1_pb0.1_pl20_iter_200');
+fname=sprintf('sandstone_2nd_(24f40f6ws9ws)_alloy_w9_b40_trans_ntx1_gr1_pb0.1_pl20_iter_1000');
 load(sprintf('results/%s.mat',fname));
 addpath('utils','function_code');
 params.optgpu = 0;
@@ -34,8 +34,8 @@ dataname='alloy_scale';
 Tlist = get_txmat(params.txtype, params.rs, params.ws, params.grid, params.numrot, params.numch);
 params.numtx = length(Tlist);
 
-for ii = 1:100
-fname=sprintf('hidstates1st_WB_100_pooled_(2f12r6wsP10Pb01)_%d',ii);
+for ii = 1:60
+fname=sprintf('hidstates1st_sandstone_pooled_(24f6wsP10Pb03)_%d',ii);
 load([fname '.mat'],'temp3');
 fprintf('Loading negdata %d...\n',ii);
 % hidstate=permute(hidstate,[3,2,1]);

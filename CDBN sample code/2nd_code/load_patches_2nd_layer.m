@@ -15,7 +15,7 @@ fprintf('Loading training data...\n');
 % xtr(ii,:) = temp(:)';
 % % f1=load([CIFAR_DIR '/filter8_ws12.mat']);
 % end
-f1=load([CIFAR_DIR '/hidstates1st_WB_100_pooled.mat']);
+f1=load([CIFAR_DIR '/hidstates1st_sandstone_pooled.mat']);
 xtr = double([f1.xtr;]);
 % xtr = gpuArray(xtr);
 
@@ -30,7 +30,7 @@ xtr = double([f1.xtr;]);
 
 
 clear f1;
-fname = sprintf('hidstate_10_2nd_f2f40(nonorm)_ws6ws%d',ws);
+fname = sprintf('hidstate_2nd_sandstone_f24f40(nonorm)_ws6ws%d',ws);
 
 if ~exist('patch','dir'),
     mkdir('patch');
@@ -50,19 +50,19 @@ catch
             c = random('unid', CIFAR_DIM(2) - ws + 1);
             cpatch = reshape(xtr(mod(i-1,size(xtr,1))+1, :), CIFAR_DIM);
             cpatch = cpatch(r:r+ws-1,c:c+ws-1,:); 
-%                         k=1;
-%             sum(sum(cpatch));
-%             while sum(sum(cpatch))<24 % less than 1%               
-%                 r = random('unid', CIFAR_DIM(1) - ws + 1);
-%                 c = random('unid', CIFAR_DIM(2) - ws + 1);
-%                 cpatch = reshape(xtr(mod(i-1,size(xtr,1))+1, :), CIFAR_DIM);
-%                 cpatch = cpatch(r:r+ws-1,c:c+ws-1,:);
-%                 k=k+1;
-%                 if k > 20
-%                     break
-%                 end
-% 
-%             end                     
+                        k=1;
+            sum(sum(cpatch));
+            while sum(sum(cpatch))<48 % less than 2%               
+                r = random('unid', CIFAR_DIM(1) - ws + 1);
+                c = random('unid', CIFAR_DIM(2) - ws + 1);
+                cpatch = reshape(xtr(mod(i-1,size(xtr,1))+1, :), CIFAR_DIM);
+                cpatch = cpatch(r:r+ws-1,c:c+ws-1,:);
+                k=k+1;
+                if k > 20
+                    break
+                end
+
+            end                     
             
             patch(i,:) = cpatch(:)';
         end
